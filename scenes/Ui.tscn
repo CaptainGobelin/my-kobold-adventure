@@ -1,0 +1,115 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scripts/Ui.gd" type="Script" id=1]
+[ext_resource path="res://scripts/ActionMenu.gd" type="Script" id=3]
+[ext_resource path="res://scenes/SquareButton.tscn" type="PackedScene" id=7]
+[ext_resource path="res://fonts/little_title.tres" type="DynamicFont" id=8]
+[ext_resource path="res://ressources/uiTileset.tres" type="TileSet" id=9]
+
+[sub_resource type="Theme" id=1]
+GridContainer/constants/hseparation = 6
+GridContainer/constants/vseparation = 6
+
+[node name="Ui" type="Control"]
+margin_top = -4.0
+grow_horizontal = 0
+grow_vertical = 0
+focus_mode = 2
+theme = SubResource( 1 )
+script = ExtResource( 1 )
+
+[node name="ActionMenu" type="TileMap" parent="."]
+tile_set = ExtResource( 9 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 1703988, 0, 0, 1703989, 0, 1, 1703990, 0, 1, 1703991, 0, 1, 1703992, 0, 1, 1703993, 0, 1, 1703994, 0, 1, 1703995, 0, 2, 1769524, 0, 65536, 1769525, 0, 65537, 1769526, 0, 65537, 1769527, 0, 65537, 1769528, 0, 65537, 1769529, 0, 65537, 1769530, 0, 65537, 1769531, 0, 65538, 1835060, 0, 65536, 1835061, 0, 65537, 1835062, 0, 65537, 1835063, 0, 65537, 1835064, 0, 65537, 1835065, 0, 65537, 1835066, 0, 65537, 1835067, 0, 65538, 1900596, 0, 65536, 1900597, 0, 65537, 1900598, 0, 65537, 1900599, 0, 65537, 1900600, 0, 65537, 1900601, 0, 65537, 1900602, 0, 65537, 1900603, 0, 65538, 1966132, 0, 65536, 1966133, 0, 65537, 1966134, 0, 65537, 1966135, 0, 65537, 1966136, 0, 65537, 1966137, 0, 65537, 1966138, 0, 65537, 1966139, 0, 65538, 2031668, 0, 65536, 2031669, 0, 65537, 2031670, 0, 65537, 2031671, 0, 65537, 2031672, 0, 65537, 2031673, 0, 65537, 2031674, 0, 65537, 2031675, 0, 65538, 2097204, 0, 65536, 2097205, 0, 65537, 2097206, 0, 65537, 2097207, 0, 65537, 2097208, 0, 65537, 2097209, 0, 65537, 2097210, 0, 65537, 2097211, 0, 65538, 2162740, 0, 131072, 2162741, 0, 131073, 2162742, 0, 131073, 2162743, 0, 131073, 2162744, 0, 131073, 2162745, 0, 131073, 2162746, 0, 131073, 2162747, 0, 131074 )
+script = ExtResource( 3 )
+
+[node name="MainMenu" type="Control" parent="ActionMenu"]
+margin_left = 832.0
+margin_top = 416.0
+margin_right = 948.0
+margin_bottom = 501.0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="ActionMenu/MainMenu"]
+visible = false
+anchor_right = 1.094
+anchor_bottom = 0.5
+margin_left = 5.0
+margin_top = 3.0
+margin_right = -3.90401
+margin_bottom = -13.5
+custom_fonts/font = ExtResource( 8 )
+text = "Carpenter"
+align = 1
+valign = 1
+
+[node name="Buttons" type="GridContainer" parent="ActionMenu/MainMenu"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 118.0
+margin_bottom = 118.0
+mouse_filter = 0
+columns = 3
+
+[node name="SquareButton" parent="ActionMenu/MainMenu/Buttons" instance=ExtResource( 7 )]
+modulate = Color( 1, 1, 1, 1 )
+disabled = false
+ButtonType = 1
+
+[node name="SquareButton2" parent="ActionMenu/MainMenu/Buttons" instance=ExtResource( 7 )]
+modulate = Color( 1, 1, 1, 1 )
+margin_left = 38.0
+margin_right = 70.0
+disabled = false
+ButtonType = 2
+
+[node name="SquareButton3" parent="ActionMenu/MainMenu/Buttons" instance=ExtResource( 7 )]
+modulate = Color( 1, 1, 1, 1 )
+margin_left = 76.0
+margin_right = 108.0
+disabled = false
+ButtonType = 3
+
+[node name="SquareButton4" parent="ActionMenu/MainMenu/Buttons" instance=ExtResource( 7 )]
+margin_top = 38.0
+margin_bottom = 70.0
+
+[node name="SquareButton5" parent="ActionMenu/MainMenu/Buttons" instance=ExtResource( 7 )]
+margin_left = 38.0
+margin_top = 38.0
+margin_right = 70.0
+margin_bottom = 70.0
+
+[node name="SquareButton6" parent="ActionMenu/MainMenu/Buttons" instance=ExtResource( 7 )]
+margin_left = 76.0
+margin_top = 38.0
+margin_right = 108.0
+margin_bottom = 70.0
+
+[node name="SquareButton7" parent="ActionMenu/MainMenu/Buttons" instance=ExtResource( 7 )]
+margin_top = 76.0
+margin_bottom = 108.0
+
+[node name="SquareButton8" parent="ActionMenu/MainMenu/Buttons" instance=ExtResource( 7 )]
+margin_left = 38.0
+margin_top = 76.0
+margin_right = 70.0
+margin_bottom = 108.0
+
+[node name="SquareButton9" parent="ActionMenu/MainMenu/Buttons" instance=ExtResource( 7 )]
+margin_left = 76.0
+margin_top = 76.0
+margin_right = 108.0
+margin_bottom = 108.0
+
+[node name="ItemList" type="ItemList" parent="ActionMenu"]
+margin_left = 720.0
+margin_top = 340.0
+margin_right = 832.0
+margin_bottom = 544.0
+max_text_lines = 2
+
+[connection signal="mouse_entered" from="." to="." method="_on_Ui_mouse_entered"]
+[connection signal="item_selected" from="ActionMenu/ItemList" to="." method="_on_ItemList_item_selected"]
